@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "WebAppMontoring.Api": {
+    "WebAppMonitoring.Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

@@ -13,7 +13,12 @@ builder.Services.AddApplicationInsightsTelemetry();
 
 builder.Services.AddAzureClients(clientBuilder =>
 {
-    clientBuilder.AddBlobServiceClient(builder.Configuration["Storage:ConnectionString"]);
+    var blobServiceConnectionString = builder.Configuration["Storage:ConnectionString"];
+    
+    if (!string.IsNullOrWhiteSpace(blobServiceConnectionString))
+    {
+        clientBuilder.AddBlobServiceClient(blobServiceConnectionString);
+    }
 });
 
 var app = builder.Build();

@@ -1,4 +1,4 @@
-namespace WebAppMontoring.Api;
+namespace WebAppMonitoring.Api;
 
 public class WeatherForecast
 {
